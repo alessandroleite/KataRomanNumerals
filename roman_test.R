@@ -8,7 +8,7 @@ if (!is.installed('svUnit')) {
 
 library(svUnit)
 
-source('Roman.R')
+source('roman.R')
 
 test (arabic_to_roman) <- function () {
 
