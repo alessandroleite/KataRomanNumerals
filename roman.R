@@ -4,11 +4,13 @@ romans  <- c('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', '
 arabic_to_roman <- function (n) {
   roman <- NULL
 
-  for (k in 1:length(arabics)) {
-     while (n >= arabics[k]) {
-        roman <- paste(roman, romans[k], sep='')
-        n <- n - arabics[k]  
-     }
-  }
+  if (n <= 3999) {
+  	for (k in 1:length(arabics)) {
+  		while (n >= arabics[k]) {
+  			roman <- paste(roman, romans[k], sep='')
+  			n <- n - arabics[k]  
+        }
+    }
+  }  
   return (roman)
 }
